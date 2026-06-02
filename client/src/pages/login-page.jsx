@@ -96,7 +96,7 @@ export default function Login() {
             <div className="d-flex justify-content-center">
               <button type="submit" disabled={!isAccept}className="btn btn-primary" style={{backgroundColor:"#FF5800",color:"white",width:"197px",height:"35px",top:"609px",left:"100px",borderRadius:"15px"}}>המשך</button>               
             </div>
-            <a href="#" style={{color:"white"}}>ליצירת קשר </a>
+            <a href="#" style={{color:"white",paddingTop:"20px"}}>ליצירת קשר </a>
           </div>
         </form>
       </div>

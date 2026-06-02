@@ -12,9 +12,14 @@ import icon2 from "../assets/logos/icons2.png";
 import icon3 from "../assets/logos/icons3.png";
 import icon4 from "../assets/logos/icons4.png";
 import Group399 from "../assets/logos/Group399.png";
+import { useNavigate } from "react-router-dom";
 
 
 export default function HomePage() {
+  const navigate =useNavigate();
+  const handleDocument = () => {
+    navigate("/uploadDocumentPage")
+  };
   return (
     <div
       className="min-vh-100 w-100"
@@ -71,6 +76,8 @@ export default function HomePage() {
           <h6 className="text-white">מס' רכב</h6>
 
           <button
+            type="button"
+            onClick={handleDocument}
             className="btn mt-3"
             style={{
               border: "2px solid #FF5800",
