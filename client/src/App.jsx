@@ -1,8 +1,15 @@
+import { BrowserRouter,Route, Routes } from "react-router-dom";
+import Login from "./pages/login-page";
+import HomePage  from "./pages/home-page";
+
 function App() {
   return (
-    <div>
-      <h1>Zeeker Israel App</h1>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Login/>} />
+      <Route path="/home" element={<HomePage  />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 

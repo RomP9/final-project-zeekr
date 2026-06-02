@@ -1,0 +1,171 @@
+import logoImg from "../assets/logos/logo.png";
+import btIcon from "../assets/logos/BT.png";
+import backGround from "../assets/hero/Vector.png";
+import zeekarCar from "../assets/images/cars/car.png";
+import frameIcon from "../assets/icons/Frame.png";
+import mapLocation from "../assets/logos/icons1.png";
+import charge from "../assets/logos/icons.png";
+import myZeekar from "../assets/logos/logo1.png";
+import ctaIcon from "../assets/logos/cta.png";
+import backlowerSkeleton from "../assets/logos/11825.png";
+import icon2 from "../assets/logos/icons2.png";
+import icon3 from "../assets/logos/icons3.png";
+import icon4 from "../assets/logos/icons4.png";
+import Group399 from "../assets/logos/Group399.png";
+
+
+export default function HomePage() {
+  return (
+    <div
+      className="min-vh-100 w-100"
+          style={{
+            backgroundImage: `url(${backGround})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "697px",
+            width: "360px",
+          }}
+    >
+      <div className="container py-4">
+        <div
+          className="d-flex justify-content-between align-items-center"
+          dir="rtl"
+        >
+          <div className="d-flex align-items-center gap-2">
+            <img
+              src=""
+              alt=""
+              style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+            />
+            <h6 className="text-white m-0">בוקר טוב</h6>
+          </div>
+
+          <img src={logoImg} alt="" style={{ width: "30px" }} />
+          <img src={btIcon} alt="" style={{ width: "40px" }} />
+        </div>
+      </div>
+
+      {/* CARD */}
+      <div className="container d-flex justify-content-center mt-5">
+        <div
+          className="text-center d-flex flex-column align-items-center"
+          style={{
+            width: "100%",
+            maxWidth: "360px",
+            backgroundColor: "#24292B",
+            borderRadius: "30px",
+            padding: "20px",
+          }}
+        >
+          <img
+            src={zeekarCar}
+            alt=""
+            className="img-fluid"
+            style={{
+              maxWidth: "240px",
+              marginTop: "-80px",
+            }}
+          />
+
+          <h5 className="text-white mt-3">ZEEKAR X</h5>
+          <h6 className="text-white">מס' רכב</h6>
+
+          <button
+            className="btn mt-3"
+            style={{
+              border: "2px solid #FF5800",
+              width: "70%",
+              borderRadius: "20px",
+              color: "white",
+            }}
+          >
+            המסמכים שלי
+          </button>
+        </div>
+      </div>
+      <div
+        className="d-flex flex-column align-items-center gap-4"
+        style={{ paddingTop: "30px" }}
+      >
+        <img src={frameIcon} alt="" style={{ width: "30px" }} />
+        <h5 style={{ color: "white" }}>לשירותך</h5>
+      </div>
+
+      <div className=" row pt-4 px-2">
+        <div className="col-4">
+          <div
+            className="d-flex flex-column aikgn-items-center justify-content-center gap-2 "
+            style={{
+              backgroundColor: "#3A3E40",
+              borderRadius: "20px",
+              height: "150px",
+              alignItems:"center"  
+
+            }}
+          >
+            <img src={mapLocation} alt="" style={{width:"70px"}}/>
+            <h6 className="text-white text-center">
+              ניווט לחניון
+              <br />
+              קרוב
+            </h6>
+          </div>
+        </div>
+
+        <div className="col-4">
+          <div
+            className="d-flex flex-column aikgn-items-center justify-content-center gap-2"
+            style={{
+              backgroundColor: "#3A3E40",
+              borderRadius: "20px",
+              height: "150px",
+              alignItems:"center"  
+            }}
+          >
+            <img src={charge} alt=""style={{width:"70px"}} />
+            <h6 className="text-white text-center">
+                נקודות טעינה
+            </h6>
+          </div>
+        </div>
+
+        <div className="col-4">
+          <div
+            className="d-flex flex-column aikgn-items-center justify-content-center gap-2"
+            style={{
+              backgroundColor: "#3A3E40",
+              borderRadius: "20px",
+              height: "150px",
+              alignItems:"center"  
+            }}
+          >
+            <img src={myZeekar} alt=""style={{width:"70px"}} />
+            <h6 className="text-white text-center">
+                MY <br/> ZEEKR
+            </h6>
+          </div>
+        </div>
+      </div>
+        <div className="" dir="rtl"  style={{marginTop:"105px"}} >
+            <img src={ctaIcon} alt="" style={{width:"70px"}} />  
+            <div className="d-flex justify-content-between px-3 align-items-center" style={{backgroundImage:`url(${backlowerSkeleton})` , height:"60px", borderRadius:"20px",backgroundSize:"cover",backgroundPosition:"center",width:"100%",borderRadius:"20px"}}>
+                
+                <div className="d-flex align-items-center gap-4 px-2 py-1">
+                    <div style={{backgroundColor:"white",borderRadius:"10px"}} className="d-flex flex-row align-items-start justify-content-between gap-1">
+                    <img src={icon2} alt="" style={{width:"30px"}}/>
+                    <span>ראשי</span>
+                    </div>
+                    <img src={icon3} alt="" style={{width:"30px"}}/>
+                </div> 
+
+                <div  className="d-flex flex-row align-items-start justify-content-between gap-5">
+                    <img src={icon4} alt="" style={{width:"30px"}}/>
+                    <img src={Group399} alt="" style={{width:"30px"}}/>                
+                </div>           
+
+            </div>  
+        </div>
+
+    </div>
+  );
+}

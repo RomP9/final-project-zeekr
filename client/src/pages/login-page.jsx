@@ -3,8 +3,8 @@
 import { useState } from "react";
 import carImage from "../assets/images/cars/Frame.png";
 import backGround from "../assets/hero/Vector.png";
-import iconLayer from "../assets/icons/Layer.png"
-
+import iconLayer from "../assets/icons/Layer.png";
+import { useNavigate } from "react-router-dom";
 
 // יצירת קומפוננטה
 export default function Login() {
@@ -16,17 +16,18 @@ export default function Login() {
   // CARNUMBER שומר מספר רכב
   // מעדכן מס' רכב
   const [carNumber, setCarNumber] = useState("");
+  const [isAccept,setIsAccepted] = useState(false);
 
   // פונקציה רצה שלוחצים על כפתור LOGIN
   // אירוע של הטופס e
   // e.preventDefault אל תרענן את הדף כי ברירת מחדל של טופס הוא רענון ולא רוצים האפליקציה
-
+  const navigate = useNavigate();  
   const handleLogin = (e) => {
     e.preventDefault();
-
-    console.log([phone, carNumber]);
-    console.log(backGround);
-  };
+  console.log([phone, carNumber]);
+  console.log(backGround);
+  navigate("/home")
+};
 
   // html
   return (
@@ -73,7 +74,7 @@ export default function Login() {
                 type="text"
                 value={carNumber}
                 onChange={(e) => setCarNumber(e.target.value)}
-                style={{ color:"white",className:"text-white", width: "320px",height:"46px", padding: "12px", borderRadius: "10px", backgroundColor:"#3A3E40",borderRadius:"7px" ,paddingLeft:"16px",paddingRight:"24px",paddingTop:"12px",paddingBottom:"12px"}}
+                style={{ color:"white", width: "320px",height:"46px", padding: "12px", backgroundColor:"#3A3E40",borderRadius:"7px" ,paddingLeft:"16px",paddingRight:"24px",paddingTop:"12px",paddingBottom:"12px"}}
               />
             </div>
             <div className="d-flex flex-column "style={{padding:"10px",paddingLeft:"60px",width:"236.07px",fontSize:"12px",gap:"2px"}}>
@@ -83,8 +84,8 @@ export default function Login() {
                     </p>
                     <img src={iconLayer} alt="iconLayer" style={{width:"13px", height:"13px"}}/>
                 </div>
-               <div className="d-flex flex-row gap-1" dir="rtl" style={{padding:"8px",paddingLeft:"30px",fontSize:"12px",color:"white",alignItems:"start",width:"240px"}}>
-                    <input type="checkbox" className="mt-1"/>
+               <div className="d-flex flex-row gap-1 align-items-center" dir="rtl" style={{padding:"8px",paddingLeft:"30px",fontSize:"12px",color:"white",alignItems:"start",width:"240px"}}>
+                    <input type="checkbox" className="mt-1" checked={isAccept} onChange={(e)=>setIsAccepted(e.target.checked)}/>
                     <span>אישור</span>
                     <span style={{ textDecoration: "underline" }}>
                          תנאי השימוש
@@ -92,7 +93,9 @@ export default function Login() {
                     <span>באפליקציה</span>
                 </div>
             </div>
-            <button type="submit"style={{backgroundColor:"#FF5800",color:"white",width:"197px",height:"35px",top:"609px",left:"100px",borderRadius:"15px",marginLeft:"60px"}}>המשך</button> 
+            <div className="d-flex justify-content-center">
+              <button type="submit" disabled={!isAccept}className="btn btn-primary" style={{backgroundColor:"#FF5800",color:"white",width:"197px",height:"35px",top:"609px",left:"100px",borderRadius:"15px"}}>המשך</button>               
+            </div>
             <a href="#" style={{color:"white"}}>ליצירת קשר </a>
           </div>
         </form>
