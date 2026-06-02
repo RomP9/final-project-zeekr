@@ -19,7 +19,7 @@ export default function Login() {
   const [isAccept,setIsAccepted] = useState(false);
 
   // פונקציה רצה שלוחצים על כפתור LOGIN
-  // אירוע של הטופס e
+  // אירוע של הטופס 
   // e.preventDefault אל תרענן את הדף כי ברירת מחדל של טופס הוא רענון ולא רוצים האפליקציה
   const navigate = useNavigate();  
   const handleLogin = (e) => {

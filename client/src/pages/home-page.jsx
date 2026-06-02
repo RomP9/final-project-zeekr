@@ -16,10 +16,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function HomePage() {
-  const navigate =useNavigate();
-  const handleDocument = () => {
-    navigate("/uploadDocumentPage")
-  };
+
   return (
     <div
       className="min-vh-100 w-100"
@@ -77,7 +74,6 @@ export default function HomePage() {
 
           <button
             type="button"
-            onClick={handleDocument}
             className="btn mt-3"
             style={{
               border: "2px solid #FF5800",
@@ -172,7 +168,6 @@ export default function HomePage() {
 
             </div>  
         </div>
-
     </div>
   );
 }
