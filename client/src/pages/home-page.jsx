@@ -14,7 +14,6 @@ import icon4 from "../assets/logos/icons4.png";
 import Group399 from "../assets/logos/Group399.png";
 import { useNavigate } from "react-router-dom";
 
-
 export default function HomePage() {
 
   return (
