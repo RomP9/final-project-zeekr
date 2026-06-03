@@ -64,7 +64,7 @@ export default function Login() {
                 type="text"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                style={{ color:"white",width: "320px",height:"46px", padding: "12px", borderRadius: "10px", backgroundColor:"#3A3E40",borderRadius:"7px" ,paddingLeft:"16px",paddingRight:"24px",paddingTop:"12px",paddingBottom:"12px"}}
+                style={{ color:"white",width: "320px",height:"46px", padding: "12px", backgroundColor:"#3A3E40",borderRadius:"7px" ,paddingLeft:"16px",paddingRight:"24px",paddingTop:"12px",paddingBottom:"12px"}}
               />
             </div>
 
